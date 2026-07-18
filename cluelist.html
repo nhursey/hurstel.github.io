@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClueList — Hurstel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #e8e4ff 100%);
+      min-height: 100vh;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .back { margin-bottom: 1.5rem; }
+    .back a {
+      color: #667eea; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+    }
+    .back a:hover { color: #764ba2; }
+
+    .hero-icon {
+      width: 72px; height: 72px; border-radius: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #fff; margin-bottom: 1rem;
+    }
+    h1 { font-size: 2rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.4rem; }
+    .subtitle {
+      font-size: 1.05rem; color: #666; font-weight: 600; margin-bottom: 2rem;
+    }
+    .meta {
+      display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .meta .pill {
+      background: rgba(102, 126, 234, 0.1); color: #667eea;
+      padding: 0.3rem 0.9rem; border-radius: 40px; font-size: 0.8rem; font-weight: 700;
+    }
+    .section { margin-bottom: 2rem; }
+    .section h2 {
+      font-size: 1.3rem; font-weight: 700; color: #1a1a2e;
+      border-bottom: 3px solid #667eea; padding-bottom: 0.5rem; margin-bottom: 1rem;
+    }
+    .section ul { padding-left: 1.5rem; color: #444; }
+    .section ul li { margin-bottom: 0.4rem; }
+    .section p { color: #444; margin-bottom: 0.6rem; }
+
+    .links-box {
+      background: #fff; border-radius: 16px; padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem;
+    }
+    .links-box h3 {
+      font-size: 1rem; font-weight: 700; color: #444; margin-bottom: 0.75rem;
+    }
+    .links-box .link-list { list-style: none; padding: 0; }
+    .links-box .link-list li {
+      margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .links-box .link-list a {
+      color: #667eea; font-weight: 700; text-decoration: none;
+    }
+    .links-box .link-list a:hover { text-decoration: underline; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.65rem 1.4rem; border-radius: 40px; font-weight: 700;
+      font-size: 0.9rem; text-decoration: none;
+      background: #667eea; color: #fff;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover { background: #764ba2; transform: scale(1.03); }
+    .btn-outline {
+      background: transparent; border: 2px solid #667eea; color: #667eea;
+    }
+    .btn-outline:hover { background: #667eea; color: #fff; }
+
+    footer {
+      text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      color: #999; font-size: 0.85rem;
+    }
+    footer a { color: #667eea; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="back"><a href="index.html">← Back to Apps</a></div>
+
+    <div class="hero-icon">🛒</div>
+    <h1>ClueList</h1>
+    <p class="subtitle">Location-based shopping list reminders that nudge you when you're near the right store.</p>
+
+    <div class="meta">
+      <span class="pill">Shopping</span>
+      <span class="pill">Location-based</span>
+      <span class="pill">Android</span>
+    </div>
+
+    <div class="links-box">
+      <h3>📄 Legal</h3>
+      <ul class="link-list">
+        <li>🔒 <a href="privacy/cluelist.html">Privacy Policy</a></li>
+        <li>⚖️ <a href="terms/cluelist.html">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="links-box">
+      <h3>🔗 Links</h3>
+      <ul class="link-list">
+        <li>📦 <a href="https://github.com/nhursey/ClueList" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>About</h2>
+      <p>ClueList is an Android app that reminds you to pick up items from your shopping list when you're near stores that carry them. No more forgetting the milk when you're already at the grocery store.</p>
+    </div>
+
+    <div class="section">
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Location-Based Cues</strong> — Push notifications when you're near a relevant store</li>
+        <li><strong>Built-in Shopping List</strong> — Categories, quantities, notes, swipe-to-delete with undo</li>
+        <li><strong>List Anywhere</strong> — Export your list to any notes app on your device</li>
+        <li><strong>Stores Tab</strong> — View nearest stores, adjust search distance, exclude stores you don't want</li>
+        <li><strong>15 Preset Categories</strong> — Produce, Dairy, Meat, and more, plus custom entries</li>
+        <li><strong>Light/Dark Theme</strong> — Choose your preference</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Tech Stack</h2>
+      <ul>
+        <li>Kotlin + Android SDK (minSdk 24, targetSdk 34)</li>
+        <li>Room Database for local persistence</li>
+        <li>Google Play Services Location for GPS tracking</li>
+        <li>Material Components for UI</li>
+        <li>Patrick Hand custom font</li>
+      </ul>
+    </div>
+
+    <footer>
+      &copy; 2026 Hurstel. All rights reserved. &middot;
+      <a href="https://github.com/nhursey/ClueList">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

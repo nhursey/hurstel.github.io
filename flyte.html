@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyte — Hurstel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #eef6ff 0%, #dbeafe 50%, #e0f2fe 100%);
+      min-height: 100vh;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .back { margin-bottom: 1.5rem; }
+    .back a {
+      color: #4facfe; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+    }
+    .back a:hover { color: #00f2fe; }
+
+    .hero-icon {
+      width: 72px; height: 72px; border-radius: 20px;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #fff; margin-bottom: 1rem;
+    }
+    h1 { font-size: 2rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.4rem; }
+    .subtitle {
+      font-size: 1.05rem; color: #666; font-weight: 600; margin-bottom: 2rem;
+    }
+    .meta {
+      display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .meta .pill {
+      background: rgba(79, 172, 254, 0.1); color: #4facfe;
+      padding: 0.3rem 0.9rem; border-radius: 40px; font-size: 0.8rem; font-weight: 700;
+    }
+    .section { margin-bottom: 2rem; }
+    .section h2 {
+      font-size: 1.3rem; font-weight: 700; color: #1a1a2e;
+      border-bottom: 3px solid #4facfe; padding-bottom: 0.5rem; margin-bottom: 1rem;
+    }
+    .section ul { padding-left: 1.5rem; color: #444; }
+    .section ul li { margin-bottom: 0.4rem; }
+    .section p { color: #444; margin-bottom: 0.6rem; }
+
+    .links-box {
+      background: #fff; border-radius: 16px; padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem;
+    }
+    .links-box h3 {
+      font-size: 1rem; font-weight: 700; color: #444; margin-bottom: 0.75rem;
+    }
+    .links-box .link-list { list-style: none; padding: 0; }
+    .links-box .link-list li {
+      margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .links-box .link-list a {
+      color: #4facfe; font-weight: 700; text-decoration: none;
+    }
+    .links-box .link-list a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      color: #999; font-size: 0.85rem;
+    }
+    footer a { color: #4facfe; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="back"><a href="index.html">← Back to Apps</a></div>
+
+    <div class="hero-icon">🗺️</div>
+    <h1>Flyte</h1>
+    <p class="subtitle">AR landmark overlay — point your camera at the world and see what's around you.</p>
+
+    <div class="meta">
+      <span class="pill">AR</span>
+      <span class="pill">Navigation</span>
+      <span class="pill">Android</span>
+    </div>
+
+    <div class="links-box">
+      <h3>📄 Legal</h3>
+      <ul class="link-list">
+        <li>🔒 <a href="privacy/flyte.html">Privacy Policy</a></li>
+        <li>⚖️ <a href="terms/flyte.html">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="links-box">
+      <h3>🔗 Links</h3>
+      <ul class="link-list">
+        <li>📦 <a href="https://github.com/nhursey/Flyte" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>About</h2>
+      <p>Flyte is an augmented reality app that overlays real-time labels on landmarks, addresses, and points of interest through your camera. Point your phone at the horizon and see what's there — works online via OpenStreetMap and offline with cached data.</p>
+    </div>
+
+    <div class="section">
+      <h2>Features</h2>
+      <ul>
+        <li><strong>AR Landmark Labels</strong> — See names of landmarks overlaid in real time</li>
+        <li><strong>Address Lookup</strong> — Point your camera at a building to see its address</li>
+        <li><strong>POI Discovery</strong> — Find nearby points of interest by category</li>
+        <li><strong>Online & Offline</strong> — Live OSM queries online, cached tiles + local DB offline</li>
+        <li><strong>Compass & Gyro</strong> — Uses device sensors for precise overlay positioning</li>
+        <li><strong>No API Key Required</strong> — Everything runs on free OpenStreetMap infrastructure</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Tech Stack</h2>
+      <ul>
+        <li>Kotlin + Android SDK</li>
+        <li>CameraX for camera pipeline</li>
+        <li>Custom Canvas View for AR overlay</li>
+        <li>osmdroid for online/offline maps</li>
+        <li>OpenStreetMap Nominatim + Overpass API</li>
+        <li>FusedLocationProvider for GPS</li>
+        <li>Room Database for offline POI cache</li>
+      </ul>
+    </div>
+
+    <footer>
+      &copy; 2026 Hurstel. All rights reserved. &middot;
+      <a href="https://github.com/nhursey/Flyte">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

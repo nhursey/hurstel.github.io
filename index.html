@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hurstel — Apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 50%, #fef3e2 100%);
+      min-height: 100vh;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      letter-spacing: -0.5px;
+    }
+    header h1 span { color: #f5a623; }
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(245, 166, 35, 0.12);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(245, 166, 35, 0.15);
+    }
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .card-icon.cl { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .card-icon.wm { background: linear-gradient(135deg, #11998e, #38ef7d); }
+    .card-icon.bh { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .card-icon.fl { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .card h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+    .card .tagline {
+      font-size: 0.85rem;
+      color: #f5a623;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+    }
+    .card .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      background: #1a1a2e;
+      color: #fff;
+      transition: background 0.2s, transform 0.15s;
+      align-self: flex-start;
+    }
+    .card .btn:hover {
+      background: #f5a623;
+      color: #1a1a2e;
+      transform: scale(1.03);
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      color: #999;
+      font-size: 0.85rem;
+    }
+    footer a { color: #f5a623; text-decoration: none; font-weight: 600; }
+    @media (max-width: 600px) {
+      .container { padding: 2rem 1rem; }
+      header h1 { font-size: 1.8rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><span>Hurstel</span> Apps</h1>
+      <p>Handy tools for everyday life — built with care.</p>
+    </header>
+
+    <div class="grid">
+      <!-- ClueList -->
+      <div class="card">
+        <div class="card-icon cl">🛒</div>
+        <div class="tagline">Shopping</div>
+        <h2>ClueList</h2>
+        <p>Location-based shopping list reminders. Get notified when you're near a store that carries what you need.</p>
+        <a href="cluelist.html" class="btn">View App →</a>
+      </div>
+
+      <!-- Well-Maintained -->
+      <div class="card">
+        <div class="card-icon wm">🏠</div>
+        <div class="tagline">Home</div>
+        <h2>Well-Maintained</h2>
+        <p>Home maintenance tracker with health scores, smart scheduling, and overdue alerts so nothing slips through the cracks.</p>
+        <a href="wellmaintained.html" class="btn">View App →</a>
+      </div>
+
+      <!-- Buy Here Check Here -->
+      <div class="card">
+        <div class="card-icon bh">🚗</div>
+        <div class="tagline">Finance</div>
+        <h2>Buy Here Check Here</h2>
+        <p>Car loan disclosure analyzer — understand your total cost, interest, amortization, and equity timeline at a glance.</p>
+        <a href="buy-here-check-here.html" class="btn">View App →</a>
+      </div>
+
+      <!-- Flyte -->
+      <div class="card">
+        <div class="card-icon fl">🗺️</div>
+        <div class="tagline">AR</div>
+        <h2>Flyte</h2>
+        <p>AR landmark overlay — point your camera to see labels on landmarks, addresses, and points of interest in real time.</p>
+        <a href="flyte.html" class="btn">View App →</a>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2026 Hurstel. All rights reserved. &middot;
+      <a href="https://github.com/nhursey">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
