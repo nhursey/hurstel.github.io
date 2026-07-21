@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <defs>
+    <clipPath id="bh-clip">
+      <circle cx="54" cy="54" r="54"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#bh-clip)">
+    <circle cx="54" cy="54" r="54" fill="#FFFFFF"/>
+    <!-- Top-left: B (Deep Blue) -->
+    <rect x="28" y="28" width="22" height="22" rx="2" fill="#1E3A5F"/>
+    <!-- Top-right: H (Teal) -->
+    <rect x="54" y="28" width="22" height="22" rx="2" fill="#00897B"/>
+    <!-- Bottom-left: C (Gold) -->
+    <rect x="28" y="54" width="22" height="22" rx="2" fill="#F9A825"/>
+    <!-- Bottom-right: H (Charcoal) -->
+    <rect x="54" y="54" width="22" height="22" rx="2" fill="#37474F"/>
+  </g>
+</svg>

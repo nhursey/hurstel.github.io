@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClueList — Hurstel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +27,11 @@
     .back a:hover { color: #764ba2; }
 
     .hero-icon {
-      width: 72px; height: 72px; border-radius: 20px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      width: 72px; height: 72px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 2rem; color: #fff; margin-bottom: 1rem;
+      margin-bottom: 1rem; overflow: hidden;
     }
+    .hero-icon img { width: 100%; height: 100%; }
     h1 { font-size: 2rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.4rem; }
     .subtitle {
       font-size: 1.05rem; color: #666; font-weight: 600; margin-bottom: 2rem;
@@ -90,7 +93,7 @@
   <div class="container">
     <div class="back"><a href="index.html">← Back to Apps</a></div>
 
-    <div class="hero-icon">🛒</div>
+    <div class="hero-icon"><img src="icons/cluelist.svg" alt="ClueList icon"></div>
     <h1>ClueList</h1>
     <p class="subtitle">Location-based shopping list reminders that nudge you when you're near the right store.</p>
 
@@ -105,13 +108,6 @@
       <ul class="link-list">
         <li>🔒 <a href="privacy/cluelist.html">Privacy Policy</a></li>
         <li>⚖️ <a href="terms/cluelist.html">Terms of Service</a></li>
-      </ul>
-    </div>
-
-    <div class="links-box">
-      <h3>🔗 Links</h3>
-      <ul class="link-list">
-        <li>📦 <a href="https://github.com/nhursey/ClueList" target="_blank">GitHub Repository</a></li>
       </ul>
     </div>
 
@@ -145,7 +141,7 @@
 
     <footer>
       &copy; 2026 Hurstel. All rights reserved. &middot;
-      <a href="https://github.com/nhursey/ClueList">GitHub</a>
+      <a href="https://github.com/nhursey">GitHub</a>
     </footer>
   </div>
 </body>

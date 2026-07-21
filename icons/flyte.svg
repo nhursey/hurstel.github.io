@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <defs>
+    <clipPath id="fl-clip">
+      <circle cx="54" cy="54" r="54"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#fl-clip)">
+    <circle cx="54" cy="54" r="54" fill="#1A73E8"/>
+    <!-- Outer sonar ring -->
+    <circle cx="54" cy="54" r="34" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4"/>
+    <!-- Middle sonar ring -->
+    <circle cx="54" cy="54" r="26" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.3"/>
+    <!-- Inner sonar ring -->
+    <circle cx="54" cy="54" r="18" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.2"/>
+    <!-- Compass arrow (N & W solid) -->
+    <path d="M54,32 L61,50 L82,54 L54,60 L54,76 L54,60 L26,54 L47,50 Z" fill="#FFFFFF"/>
+    <!-- SE quadrant ghost trail -->
+    <path d="M54,54 L82,54 L54,60 L54,76 Z" fill="#FFFFFF" fill-opacity="0.25"/>
+  </g>
+</svg>

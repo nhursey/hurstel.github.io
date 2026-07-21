@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <defs>
+    <clipPath id="cl-clip">
+      <circle cx="54" cy="54" r="54"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#cl-clip)">
+    <circle cx="54" cy="54" r="54" fill="#12121E"/>
+    <!-- Bell body -->
+    <path d="M54,28 C51.3,28 49,30.3 49,33 L49,35.5 C41.8,37.6 36.5,44.3 36.5,52 L36.5,68 L31,75 L77,75 L71.5,68 L71.5,52 C71.5,44.3 66.2,37.6 59,35.5 L59,33 C59,30.3 56.7,28 54,28 Z" fill="#FBBF24"/>
+    <!-- Bell highlight -->
+    <path d="M40,50 Q40,40 46,35 L46,33 Q46,30 50,29 Q44,31 42,38 Q40,44 40,50 Z" fill="#FEF9C3" fill-opacity="0.3"/>
+    <!-- List line 1 checkbox -->
+    <rect x="44" y="46" width="5" height="4" fill="#78350F" fill-opacity="0.35"/>
+    <!-- List line 1 text -->
+    <rect x="52" y="46" width="14" height="3" fill="#78350F" fill-opacity="0.35"/>
+    <!-- List line 2 checkbox (checked) -->
+    <rect x="44" y="54" width="5" height="4" fill="#00E676" fill-opacity="0.9"/>
+    <!-- List line 2 text -->
+    <rect x="52" y="54" width="16" height="3" fill="#78350F" fill-opacity="0.7"/>
+    <!-- List line 3 checkbox -->
+    <rect x="44" y="62" width="5" height="4" fill="#78350F" fill-opacity="0.35"/>
+    <!-- List line 3 text -->
+    <rect x="52" y="62" width="12" height="3" fill="#78350F" fill-opacity="0.35"/>
+    <!-- Bell clapper -->
+    <path d="M47,78 C47,80.2 49.2,82 54,82 C58.8,82 61,80.2 61,78 Z" fill="#F59E0B"/>
+    <!-- Bell top nub -->
+    <rect x="50" y="24" width="8" height="5" fill="#F59E0B"/>
+  </g>
+</svg>
