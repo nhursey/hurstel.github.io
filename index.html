@@ -1,197 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hurstel — Apps</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 50%, #fef3e2 100%);
-      min-height: 100vh;
-      color: #2d2d2d;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #1a1a2e;
-      letter-spacing: -0.5px;
-    }
-    header h1 span { color: #f5a623; }
-    header p {
-      font-size: 1.1rem;
-      color: #666;
-      margin-top: 0.5rem;
-      font-weight: 600;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 1.75rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid rgba(245, 166, 35, 0.12);
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(245, 166, 35, 0.15);
-    }
-    .card-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      overflow: hidden;
-    }
-    .card-icon img {
-      width: 100%;
-      height: 100%;
-    }
-    .card h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: #555;
-      flex: 1;
-      margin-bottom: 1.25rem;
-    }
-    .card .tagline {
-      font-size: 0.85rem;
-      color: #f5a623;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.3rem;
-    }
-    .card .soon-badge {
-      display: inline-block;
-      background: #f5a623;
-      color: #fff;
-      font-size: 0.68rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 0.22rem 0.7rem;
-      border-radius: 40px;
-      margin-top: 0.15rem;
-    }
-    .card .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.65rem 1.4rem;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      background: #1a1a2e;
-      color: #fff;
-      transition: background 0.2s, transform 0.15s;
-      align-self: flex-start;
-    }
-    .card .btn:hover {
-      background: #f5a623;
-      color: #1a1a2e;
-      transform: scale(1.03);
-    }
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(0,0,0,0.06);
-      color: #999;
-      font-size: 0.85rem;
-    }
-    footer a { color: #f5a623; text-decoration: none; font-weight: 600; }
-    @media (max-width: 600px) {
-      .container { padding: 2rem 1rem; }
-      header h1 { font-size: 1.8rem; }
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hurstelos — Apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=EB+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: #0b1220; color: #c9d1d9; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+
+  .banner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .9rem 2rem; border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .banner .logo { font-weight: 900; font-size: 1.15rem; letter-spacing: -.5px; color: #f0f6fc; text-decoration: none; }
+  .banner .logo .tau { font-family: 'EB Garamond', serif; font-weight: 700; color: #f5a623; font-style: normal; }
+  .banner .nav { display: flex; gap: 1.3rem; }
+  .banner .nav a { color: #8fb0ff; text-decoration: none; font-weight: 700; font-size: .82rem; }
+  .banner .nav a:hover { color: #f5a623; }
+
+  .hero {
+    background:
+      radial-gradient(640px 320px at 15% 0%, rgba(102,126,234,.28), transparent),
+      radial-gradient(520px 280px at 85% 10%, rgba(245,166,35,.16), transparent),
+      #0b1220;
+    text-align: center;
+    padding: 4.6rem 2rem 4rem;
+  }
+  .hero h1 { font-size: 3rem; color: #f0f6fc; font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; }
+  .hero h1 .tau { font-family: 'EB Garamond', serif; font-weight: 700; color: #f5a623; font-style: normal; font-size: 1.12em; }
+  .hero .cta { display: flex; gap: .8rem; justify-content: center; margin-top: 1.8rem; }
+  .hero .cta a {
+    padding: .7rem 1.6rem; border-radius: 40px; font-weight: 800; font-size: .88rem; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .hero .cta .primary { background: #f5a623; color: #0b1220; }
+  .hero .cta .primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,166,35,.35); }
+
+  .apps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.1rem; padding: 1.8rem 2rem 2.6rem; max-width: 1100px; margin: 0 auto;
+  }
+  .app {
+    background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.09);
+    border-radius: 16px; padding: 1.3rem;
+    transition: transform .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .app:hover { transform: translateY(-3px); border-color: rgba(245,166,35,.4); background: rgba(255,255,255,.07); }
+  .app .ic {
+    width: 46px; height: 46px; border-radius: 13px; background: rgba(255,255,255,.06);
+    display: flex; align-items: center; justify-content: center; margin-bottom: .9rem;
+  }
+  .app .ic img { width: 28px; height: 28px; }
+  .app .tag { font-size: .62rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #8fa3c8; }
+  .app h3 { color: #f0f6fc; font-size: 1rem; margin: .2rem 0 .35rem; }
+  .app h3 a { text-decoration: none; }
+  .app h3 a:hover { color: #f5a623; }
+  .app p { color: #8fa3c8; font-size: .76rem; line-height: 1.5; }
+  .app .badge {
+    display: inline-block; margin-top: .75rem; font-size: .6rem; font-weight: 800;
+    letter-spacing: .1em; text-transform: uppercase; padding: .24rem .65rem; border-radius: 30px;
+  }
+  .app .badge.soon { background: rgba(245,166,35,.15); color: #f5a623; }
+  .app .badge.live { background: rgba(46,160,67,.18); color: #3fb950; }
+
+  footer {
+    border-top: 1px solid rgba(255,255,255,.06); padding: 1.3rem 2rem;
+    text-align: center; color: #5b6b8c; font-size: .78rem;
+  }
+
+  @media (max-width: 640px) {
+    .banner { padding: .8rem 1.1rem; }
+    .banner .nav { gap: .9rem; }
+    .hero { padding: 3.2rem 1.2rem 2.8rem; }
+    .hero h1 { font-size: 2.3rem; }
+    .apps { padding: 1.4rem 1.1rem 2rem; }
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1><span>Hurstel</span> Apps</h1>
-      <p>Handy tools for everyday life — built with care.</p>
-    </header>
+  <div class="banner">
+    <a class="logo" href="index.html">hurs<span class="tau">τ</span>elos</a>
+    <nav class="nav">
+      <a href="#apps">Apps</a>
+      <a href="privacy/cluelist.html">Privacy</a>
+      <a href="terms/cluelist.html">Terms</a>
+    </nav>
+  </div>
 
-    <div class="grid">
-      <!-- ClueList -->
-      <div class="card">
-        <div class="card-icon"><img src="icons/cluelist.svg" alt="ClueList icon"></div>
-        <div class="tagline">Shopping</div>
-        <h2>ClueList</h2>
-        <p>Location-based shopping list reminders. Get notified when you're near a store that carries what you need.</p>
-        <a href="cluelist.html" class="btn">View App →</a>
-      </div>
+  <section class="hero">
+    <h1>hurs<span class="tau">τ</span>elos</h1>
+    <div class="cta"><a class="primary" href="#apps">Explore the apps</a></div>
+  </section>
 
-      <!-- Well-Maintained -->
-      <div class="card">
-        <div class="card-icon"><img src="icons/wellmaintained.svg" alt="Well-Maintained icon"></div>
-        <div class="tagline">Home</div>
-        <div class="soon-badge">Coming Soon</div>
-        <h2>Well-Maintained</h2>
-        <p>Home maintenance tracker with health scores, smart scheduling, and overdue alerts so nothing slips through the cracks.</p>
-        <a href="wellmaintained.html" class="btn">View App →</a>
-      </div>
-
-      <!-- Buy Here Check Here -->
-      <div class="card">
-        <div class="card-icon"><img src="icons/buy-here-check-here.svg" alt="Buy Here Check Here icon"></div>
-        <div class="tagline">Finance</div>
-        <div class="soon-badge">Coming Soon</div>
-        <h2>Buy Here Check Here</h2>
-        <p>Car loan disclosure analyzer — understand your total cost, interest, amortization, and equity timeline at a glance.</p>
-        <a href="buy-here-check-here.html" class="btn">View App →</a>
-      </div>
-
-      <!-- Flyte -->
-      <div class="card">
-        <div class="card-icon"><img src="icons/flyte.svg" alt="Flyte icon"></div>
-        <div class="tagline">AR</div>
-        <div class="soon-badge">Coming Soon</div>
-        <h2>Flyte</h2>
-        <p>AR landmark overlay — point your camera to see labels on landmarks, addresses, and points of interest in real time.</p>
-        <a href="flyte.html" class="btn">View App →</a>
-      </div>
+  <section class="apps" id="apps">
+    <div class="app">
+      <div class="ic"><img src="icons/cluelist.svg" alt="ClueList icon"></div>
+      <div class="tag">Shopping</div>
+      <h3><a href="cluelist.html">ClueList</a></h3>
+      <p>Location-based shopping list reminders. Get notified when you're near a store that carries what you need.</p>
+      <span class="badge live">Available Now</span>
     </div>
 
-    <footer>
-      &copy; 2026 Hurstel. All rights reserved.
-    </footer>
-  </div>
+    <div class="app">
+      <div class="ic"><img src="icons/wellmaintained.svg" alt="Well-Maintained icon"></div>
+      <div class="tag">Home</div>
+      <h3><a href="wellmaintained.html">Well-Maintained</a></h3>
+      <p>Home maintenance tracker with health scores, smart scheduling, and overdue alerts so nothing slips through the cracks.</p>
+      <span class="badge soon">Coming Soon</span>
+    </div>
+
+    <div class="app">
+      <div class="ic"><img src="icons/buy-here-check-here.svg" alt="Buy Here Check Here icon"></div>
+      <div class="tag">Finance</div>
+      <h3><a href="buy-here-check-here.html">Buy Here Check Here</a></h3>
+      <p>Car loan disclosure analyzer — understand your total cost, interest, amortization, and equity timeline at a glance.</p>
+      <span class="badge soon">Coming Soon</span>
+    </div>
+
+    <div class="app">
+      <div class="ic"><img src="icons/flyte.svg" alt="Flyte icon"></div>
+      <div class="tag">AR</div>
+      <h3><a href="flyte.html">Flyte</a></h3>
+      <p>AR landmark overlay — point your camera to see labels on landmarks, addresses, and points of interest in real time.</p>
+      <span class="badge soon">Coming Soon</span>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Hurstelos. All rights reserved.
+  </footer>
 </body>
 </html>
