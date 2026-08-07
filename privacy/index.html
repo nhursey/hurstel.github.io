@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policies — Hurstelos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=EB+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: #0b1220; color: #c9d1d9; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+
+  .banner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .9rem 2rem; border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .banner .logo { font-weight: 900; font-size: 1.15rem; letter-spacing: -.5px; color: #f0f6fc; text-decoration: none; }
+  .banner .logo .tau { font-family: 'EB Garamond', serif; font-weight: 700; color: #f5a623; font-style: normal; }
+  .banner .nav { display: flex; gap: 1.3rem; }
+  .banner .nav a { color: #8fb0ff; text-decoration: none; font-weight: 700; font-size: .82rem; }
+  .banner .nav a:hover { color: #f5a623; }
+
+  .page { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 2.6rem; }
+  .page h1 { font-size: 2.2rem; font-weight: 900; color: #f0f6fc; letter-spacing: -1px; }
+  .page h1 .tau { font-family: 'EB Garamond', serif; font-weight: 700; color: #f5a623; font-style: normal; }
+  .page .sub { color: #8fa3c8; font-weight: 600; margin-top: .5rem; max-width: 520px; line-height: 1.6; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.1rem; margin-top: 2rem; }
+  .card {
+    background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.09);
+    border-radius: 16px; padding: 1.3rem;
+    transition: transform .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .card:hover { transform: translateY(-3px); border-color: rgba(245,166,35,.4); background: rgba(255,255,255,.07); }
+  .card .ic {
+    width: 46px; height: 46px; border-radius: 13px; background: rgba(255,255,255,.06);
+    display: flex; align-items: center; justify-content: center; margin-bottom: .9rem;
+  }
+  .card .ic img { width: 28px; height: 28px; }
+  .card .tag { font-size: .62rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #8fa3c8; }
+  .card h3 { color: #f0f6fc; font-size: 1rem; margin: .2rem 0 .35rem; }
+  .card p { color: #8fa3c8; font-size: .76rem; line-height: 1.5; }
+  .card a.go {
+    display: inline-block; margin-top: .8rem; color: #f5a623; font-weight: 800;
+    font-size: .8rem; text-decoration: none;
+  }
+  .card a.go:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid rgba(255,255,255,.06); padding: 1.3rem 2rem;
+    text-align: center; color: #5b6b8c; font-size: .78rem;
+  }
+  footer a { color: #8fb0ff; text-decoration: none; font-weight: 700; margin: 0 .5rem; }
+  footer a:hover { color: #f5a623; }
+
+  @media (max-width: 640px) {
+    .banner { padding: .8rem 1.1rem; }
+    .banner .nav { gap: .9rem; }
+    .page { padding: 2rem 1.1rem 2rem; }
+    .page h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <a class="logo" href="index.html">hurs<span class="tau">τ</span>elos</a>
+    <nav class="nav">
+      <a href="index.html#apps">Apps</a>
+      <a href="privacy/index.html">Privacy</a>
+      <a href="terms/index.html">Terms</a>
+    </nav>
+  </div>
+
+  <div class="page">
+    <h1>Privacy Policies</h1>
+    <p class="sub">Each app has its own policy — pick the one you're using. No data is ever sold; each policy spells out exactly what's collected and why.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="ic"><img src="../icons/cluelist.svg" alt="ClueList icon"></div>
+        <div class="tag">Shopping</div>
+        <h3>ClueList</h3>
+        <p>Location-based shopping list reminders.</p>
+        <a class="go" href="cluelist.html">Read policy →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic"><img src="../icons/wellmaintained.svg" alt="Well-Maintained icon"></div>
+        <div class="tag">Home</div>
+        <h3>Well-Maintained</h3>
+        <p>Home maintenance tracker with health scores.</p>
+        <a class="go" href="wellmaintained.html">Read policy →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic"><img src="../icons/buy-here-check-here.svg" alt="Buy Here Check Here icon"></div>
+        <div class="tag">Finance</div>
+        <h3>Buy Here Check Here</h3>
+        <p>Car loan disclosure analyzer.</p>
+        <a class="go" href="buy-here-check-here.html">Read policy →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic"><img src="../icons/flyte.svg" alt="Flyte icon"></div>
+        <div class="tag">AR</div>
+        <h3>Flyte</h3>
+        <p>AR landmark overlay — online and offline maps.</p>
+        <a class="go" href="flyte.html">Read policy →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Hurstelos. All rights reserved.
+    <span>· <a href="privacy/index.html">Privacy</a> · <a href="terms/index.html">Terms</a></span>
+  </footer>
+</body>
+</html>
