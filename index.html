@@ -45,11 +45,14 @@
     gap: 1.1rem; padding: 1.8rem 2rem 2.6rem; max-width: 1100px; margin: 0 auto;
   }
   .app {
-    background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.09);
-    border-radius: 16px; padding: 1.3rem;
-    transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    background: rgba(255,255,255,.045); border: 2px solid rgba(255,255,255,.09);
+    border-radius: 16px; padding: 1.3rem; cursor: pointer;
+    transition: transform .15s ease, border-color .15s ease, background .15s ease, box-shadow .15s ease;
   }
-  .app:hover { transform: translateY(-3px); border-color: rgba(245,166,35,.4); background: rgba(255,255,255,.07); }
+  .app:hover {
+    transform: translateY(-3px); border-color: #f5a623;
+    background: rgba(245,166,35,.08); box-shadow: 0 8px 28px rgba(245,166,35,.15);
+  }
   .app .ic {
     width: 46px; height: 46px; border-radius: 13px; background: rgba(255,255,255,.06);
     display: flex; align-items: center; justify-content: center; margin-bottom: .9rem;
@@ -134,5 +137,17 @@
     &copy; 2026 Hurstelos. All rights reserved.
     <span style="margin-left:.6rem">· <a href="privacy/index.html" style="color:#8fb0ff; text-decoration:none; font-weight:700">Privacy</a> · <a href="terms/index.html" style="color:#8fb0ff; text-decoration:none; font-weight:700">Terms</a></span>
   </footer>
+
+  <script>
+    // Make the entire app card clickable — clicking anywhere in the box
+    // navigates to that app's page, not just the name link.
+    document.querySelectorAll('.app').forEach(function (card) {
+      var link = card.querySelector('h3 a');
+      if (!link) return;
+      card.addEventListener('click', function () {
+        window.location.href = link.getAttribute('href');
+      });
+    });
+  </script>
 </body>
 </html>
